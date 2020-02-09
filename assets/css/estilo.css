@@ -1,30 +1,72 @@
 .base {
-  display: flex;
+  display: block;
   height: 100vh;
   width: 100vw;
-  background-color: red;
-  justify-content: center;
+  background-color: #141414;
   position: fixed;
-}
-
-.base > .centro:not(:first-child){
-   display: none;
 }
 
 .centro{
   display: block;
   height: 100%;
   width: 80%;
-  background-color: green;
-  justify-content: center;
-  align-items: stretch;
+  margin: auto;
+  background-color: #141414;
 }
 
-.colunas{
-  width: 100%;
-  height: 90%;
+.secao{
+  display: none;
+}
+
+.secao.visible{
   display: flex;
-  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-content: space-around;
+  flex-direction: column;
+}
+
+.conteudo{
+  display: flex;
+  height: 90%;
+  width: auto;
+}
+
+.p40{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 40%;
+  height: 100%;
+}
+
+.p60{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
+  margin: auto;
+}
+
+.titulo{
+  font-family: 'Lato', sans-serif;
+  color: gold;
+  font-size: 24px;
+	font-weight: 600;
+	line-height: 1.4;
+	margin-bottom: 1em;
+}
+
+.texto{
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+	font-weight: 300;
+	line-height: 1.6;
+	margin-bottom: 1em;
+  color: white;
 }
 
 .seta-baixo{
@@ -35,4 +77,13 @@
   background-repeat: no-repeat;
   margin: auto;
   cursor: pointer;
+  opacity: 1;
+  animation: animar 1000ms ease infinite;
+}
+
+@keyframes animar {
+    to {
+        opacity: 0.0;
+        transform: scale(0.85) translateY(20px);
+    }
 }
