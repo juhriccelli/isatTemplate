@@ -5,6 +5,7 @@ $(document).ready(function() {
 
   $('.heart').click(function() {
     $('.perfil').removeClass('visible');
-    $('.perfil').eq(index('.heart')).addClass('visible');
+    var aux = $('.heart').index();
+    $('.perfil').siblings().eq(aux).addClass('visible');
   });
 });
