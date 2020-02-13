@@ -9,7 +9,7 @@
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/acao.js"></script>
-  <title>Teste de template ISAT </title>
+  <title>Template Netflix</title>
 </head>
 </body>
 </html>
